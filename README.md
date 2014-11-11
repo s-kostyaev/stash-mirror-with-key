@@ -28,7 +28,11 @@ How to use this hook
 `xclip keyname.pub` -> github repo page -> settings -> Deploy keys ->
 Add deploy key -> paste -> add key
 * Add hook to your stash repo: `xclip keyname` -> stash repo page ->
-settings -> Hooks -> enable External Async Post Receive Hook ->
+settings -> Hooks -> enable External Async Post Receive Hook -> paste
+script hook name in "Executable" field -> enable checkbox "Use safe
+dir" -> paste key from buffer to "positional parameters" field (first
+line must be github SSH clone URL of mirror repo, other lines is
+private key pasted from buffer)
 ![hook options](https://raw.githubusercontent.com/s-kostyaev/stash-mirror-with-key/master/hook.png)
 -> enable
 * Profit!
