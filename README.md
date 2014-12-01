@@ -18,6 +18,8 @@ stash server:
 
     scp mirror-with-key.sh root@stashhost:/path/to/stash-home/data/external-hooks/
 
+    scp mirror-with-key-debug.sh root@stashhost:/path/to/stash-home/data/external-hooks/
+	
 
 How to use this hook
 ---------------------
@@ -36,3 +38,11 @@ private key pasted from buffer)
 ![hook options](https://raw.githubusercontent.com/s-kostyaev/stash-mirror-with-key/master/hook.png)
 → Save
 5. Profit!
+
+Debug
+-----------
+
+For debug go to hook configuration and change script name from
+`mirror-with-key.sh` to `mirror-with-key-debug.sh`. After that add
+your email between repo path and private key (on the second line ---
+one line for each argument). This hook send debug message to your email.
